@@ -115,8 +115,11 @@ html {
 .nav-desktop .nav-ul .dropdown:hover .sub-menu {
     visibility: visible;
     opacity: 1;
-    top: 30px;
+    top: 36px;
 }
+/* .nav-desktop .nav-ul .dropdown:hover::after{
+    transform: rotate(-90deg);
+} */
 
 a.active-page {
     border-bottom: 2px solid #000000;
@@ -150,10 +153,11 @@ a.active-page {
     width: 10px;
     height: 6px;
     position: absolute;
-    top: 8px;
+    top: 7px;
     right: 0;
     /* transform: translateY(-50%); */
     background-image: url("../img/down-arrow.png");
+    transition: all 0.2s;
 }
 
 .nav-ul {
@@ -190,37 +194,42 @@ a.active-page {
 }
 
 .sub-menu {
-    background-color: #dadada;
+    background-color: #ffffff;
     position: absolute;
     width: 200px;
     top: 50px;
     visibility: hidden;
     opacity: 0;
     z-index: 9999999;
+    box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.15);
+    padding: 5px 0;
 }
 
 .sub-menu li {
     margin: 0;
-    border-bottom: 1px dotted #232121;
 }
 
-.sub-menu li:first-child {
+/* .sub-menu li:first-child {
     border-top: 1px solid #ff0011;
-}
+} */
 
-.sub-menu li:last-child {
+/* .sub-menu li:last-child {
     border-bottom: none;
-}
+} */
 
 .sub-menu li a {
     display: block;
     padding: 10px 15px;
     transition: all 0.5s;
+    font-family: 'Regular';
+    font-size: 12px;
+    color: #101112;
 }
 
 .sub-menu li a:hover {
-    background-color: #ea3b47;
-    color: #ffffff;
+    color: #ea3b47;
 }
 
 .search-small input[type="search"] {
@@ -440,16 +449,20 @@ a.active-page {
 .date p {
     font-size: 14px;
     margin: 0;
-    color: #3a3e43;
+    color: #6e6f71;
     line-height: 16px;
     padding-left: 7px;
     padding-top: 2px;
     font-family: 'Medium';
 }
-
-.date p span {
-    font-family: 'Bold';
+.date-icon img{
+    width: 14px;
+    height: 16px;
+    filter: contrast(0.4);
 }
+/* .date p span {
+    font-family: 'Bold';
+} */
 
 .description p {
     font-size: 17px;
@@ -1391,6 +1404,12 @@ a.active-page {
     border: 2px solid #c8ced89a;
 }
 
+.suggested-area .date{
+    display: none;
+}
+.suggested-area .story-card h2{
+    padding-bottom: 0;
+}
 
 
 
